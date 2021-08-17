@@ -1,0 +1,13 @@
+<IfModule mod_rewrite.c>
+
+	# Engine And Base:
+	RewriteEngine on
+	RewriteBase /
+	Options -Indexes
+
+	# Rules:
+	RewriteRule ^index\.php$ - [L]
+	RewriteRule ^assets/(.*) - [L]
+	RewriteRule ^(.*)$ /index.php [NC,L,QSA]
+
+</IfModule>
